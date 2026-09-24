@@ -1,0 +1,14 @@
+﻿{
+  "goal": "one sentence from the user's current turn",
+  "mode": "investigate|debug|implement|refactor",
+  "working_set": ["path or symbol, keep short"],
+  "constraints": ["user vetoes and explicit do-not-touch"],
+  "observed": ["join keys only: path, test id, error code, SHA, HTTP"],
+  "unknown": [],
+  "blocked": [],
+  "evidence_command": "the seam to run this turn",
+  "neighbors": ["commands that must not newly fail if shared state changed"],
+  "must_refetch": ["anything written or compacted since last seen"],
+  "rework_count": 0,
+  "unshipped": []
+}
