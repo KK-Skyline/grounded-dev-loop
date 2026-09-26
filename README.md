@@ -1,4 +1,8 @@
 ﻿<p align="center">
+  <strong>中文</strong> · <a href="README.en.md">English</a>
+</p>
+
+<p align="center">
   <img src="assets/hero.png" alt="据实落地 grounded-dev-loop" width="100%">
 </p>
 
