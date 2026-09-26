@@ -22,7 +22,7 @@
 | --- | --- |
 | 用用户这一轮的话写目标 | 把上一轮助手的结论当成证据 |
 | 只选一个模式：investigate / debug / implement / refactor | debug 时顺手重构 |
-| 工作集尽量不超过 7 个符号 | 没点名的数据、密钥、生成物 |
+| 工作集尽量不超过 7 个符号，只限制写入 | 用停规则跳过已点名的复现；改没点名的数据、密钥、生成物 |
 | 在用户会碰到的入口上验证 | 改测试 expected 换绿 |
 
 正文在 [SKILL.md](SKILL.md)。反例在 [reference.md](reference.md)，短例在 [examples.md](examples.md)。

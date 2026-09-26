@@ -1,5 +1,19 @@
 ﻿# 据实落地：短例
 
+## 根因审查把复现留到 next（误操作）
+
+用户要一批问题的根因，以及带代码证据的清单，并且挂了 diagnose。diagnose 可以不在 Cursor 自带 skill 目录里。
+
+```text
+goal: 这些项的根因；清单每一条都有代码证据
+mode: investigate
+working-set: 本回合不改产品代码，所以不占用写入名额
+evidence: 作者给出的临时目录复现和点名用例已跑；点名的删除/更新路径和真实冲突已读
+```
+
+做：保持 `investigate`。按 diagnose Phase 1，先跑能变红、对得上症状的命令，再写清单。
+不做：读几行被引用的源码就交清单，把复现放进 `next`。工作集 ≤7、「下一步只一件」、以及「diagnose 不是 Cursor skill」，都不能当成跳过的理由。
+
 ## Debug：测试红
 
 ```text
