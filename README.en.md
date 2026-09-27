@@ -18,7 +18,7 @@
   <a href="#license">License</a>
 </p>
 
-> A Cursor Agent Skill. In a long thread, coding and debugging drift: the goal turns into an epic, a chat summary is treated as fact, and one edit lands on a surface it should leave alone. 据实落地 locks this turn to: **goal → mode → working set → evidence from this turn → one change → verification at the real entry → neighbors → stop.**
+> A Cursor Agent Skill. In a long thread, coding and debugging drift: the goal turns into an epic, a chat summary is treated as fact, and one edit lands on a surface it should leave alone. 据实落地 runs this turn as a state machine: the model fills the ledger and judges the current state; `scripts/next-state.py` selects the next state from ordered guards.
 
 ## What it does
 

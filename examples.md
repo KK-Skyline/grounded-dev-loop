@@ -47,4 +47,18 @@ evidence: 当前重名返回 200（本回合 curl 或已有测试）
 
 ## 两次落空
 
-同一 `pytest …::test_cart_total` 已两次改完仍红：停止再猜。画出 `request → service → total → tax`，标谁是权威、有没有第二处改价。第三刀必须打在图上的一个节点。
+同一 `pytest …::test_cart_total` 已两次改完仍红：停止再猜。画出 `request → service → total → tax`，标谁是权威、有没有第二处改价。第三刀必须打在图上的一个节点。`rework_count` 到 2 且 `terrain_done` 仍为假时，脚本进入 `map_terrain`，不回到 `write`。
+
+## 代理绿打回同一条缝
+
+账本里入口命令是用户会碰到的保存请求。本回合只断言了命令行参数和写出的文件，标签若写成 `behavior_pass`，那是判错。写成 `proxy_green` 时，脚本第一次回到 `verify_seam` 并清掉 `seam_ran`；同一标签再出现则进入 `end_unverified`。不能改口说已经 verified。
+
+```text
+q: judge_verdict
+verdict: proxy_green
+proxy_count: 0
+→ python scripts/next-state.py
+q: verify_seam
+proxy_count: 1
+seam_ran: false
+```
